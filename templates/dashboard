@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Conversation Analytics Dashboard</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+padding:30px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:10px;
+width:300px;
+}
+
+.container{
+display:flex;
+gap:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Live Conversation Analytics</h1>
+
+<div class="container">
+
+<div class="card">
+<h3>Intent</h3>
+<p id="intent">-</p>
+</div>
+
+<div class="card">
+<h3>Topic</h3>
+<p id="topic">-</p>
+</div>
+
+<div class="card">
+<h3>Sentiment</h3>
+<p id="sentiment">-</p>
+</div>
+
+<div class="card">
+<h3>Escalation Risk</h3>
+<p id="risk">-</p>
+</div>
+
+</div>
+
+<script>
+
+const ws = new WebSocket("ws://127.0.0.1:8000/dashboard")
+
+ws.onmessage = function(event){
+
+    const data = JSON.parse(event.data)
+
+    document.getElementById("intent").innerText = data.intent
+    document.getElementById("topic").innerText = data.topic
+    document.getElementById("sentiment").innerText = data.sentiment
+    document.getElementById("risk").innerText = data.escalation_risk
+}
+
+</script>
+
+</body>
+
+</html>
