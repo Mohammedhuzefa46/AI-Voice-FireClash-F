@@ -2,11 +2,11 @@ import sounddevice as sd
 import numpy as np
 import queue
 
-# Queue to store audio chunks
+
 audio_queue = queue.Queue()
 
 sample_rate = 16000
-chunk_duration = 0.02  # 20 ms
+chunk_duration = 0.02 
 chunk_size = int(sample_rate * chunk_duration)
 
 
@@ -35,5 +35,6 @@ def start_stream():
 
 
 def get_audio_chunk():
+
 
     return audio_queue.get()
