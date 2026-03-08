@@ -3,7 +3,7 @@ pyaudio
 fastapi
 uvicorn
 websocket-client
-pyttsx3 
+pyttsx3
 langchain
 langchain-community
 langchain-text-splitters
@@ -14,15 +14,11 @@ sounddevice
 numpy
 openai
 python-dotenv
-speechrecognition
-pyaudio
 gtts
 playsound
 transformers
 torch
-numpy
 scikit-learn
 nltk
 spacy
-sounddevice
 scipy
