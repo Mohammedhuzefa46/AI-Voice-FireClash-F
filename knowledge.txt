@@ -1,0 +1,9 @@
+ATM withdrawal limit is 20000 rupees per day.
+
+The interest rate for personal loans starts from 9 percent per year.
+
+If a debit card is lost, the user should immediately block the card using the banking app or customer support.
+
+Savings account interest rate is 3.5 percent annually.
+
+If a transaction fails but money is deducted, the bank usually refunds it within 3 working days.
